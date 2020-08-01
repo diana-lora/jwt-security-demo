@@ -21,8 +21,6 @@ class SecurityConfiguration(private val tokenProvider: TokenProvider): WebSecuri
             .and()
             .authorizeRequests()
 
-            // actuator endpoints are free
-            .antMatchers(HttpMethod.GET, "/actuator/**").permitAll()
             // anything else should be authenticated
             .antMatchers("/users/**").authenticated()
             .and()
