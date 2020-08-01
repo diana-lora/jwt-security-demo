@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test
 import org.springframework.http.HttpHeaders
 import org.springframework.http.HttpStatus
 
-class ApplicationTest: AbstractIntegrationTest() {
+class UserControllerIT: AbstractIntegrationTest() {
 
     private fun getUser(token: String, id: Long): ValidatableResponse {
         return RestAssured.given()
